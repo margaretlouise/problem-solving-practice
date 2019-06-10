@@ -8,32 +8,22 @@
 // AKA
 // do a fibonacci sequence and add up any terms that are divisible by 2
 
-// write a function that 
-function buildFibonacci(array, number) {
-  if(number == 0) {
-    return 1;
+var sum = 0
+
+var current = 1;
+var previous = 0;
+
+// variable i starts at 1, and increases by the lastValue of itself
+while(current <= 4000000) {
+  if (current % 2 === 0) {
+    sum += current;
   }
-  if(number == 1) {
-    return 2;
-  }
-  return array[number - 1] + array[number - 2];
+  var temp = previous;
+  previous = current;
+  current += temp;
 }
 
-var total = 0;
+// var i = 1
+// secondValue
 
-var array = [];
-
-
-for(var i = 0; i < 4000000; i++) {
-  array[i] = buildFibonacci(array, i);
-
-  if(array[i] > 4000000) {
-    break;
-  }
-  if(array[i] % 2 == 0) {
-    total += array[i]
-  }
-}
-
-console.log(total);
-// 4613732
+console.log(sum);
