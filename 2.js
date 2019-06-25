@@ -23,7 +23,5 @@ while(current <= 4000000) {
   current += temp;
 }
 
-// var i = 1
-// secondValue
-
 console.log(sum);
+// 4613732
