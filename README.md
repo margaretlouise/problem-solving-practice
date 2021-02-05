@@ -1,1 +1,1 @@
-# projecteuler
+#problem solving practice
